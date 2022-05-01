@@ -1,0 +1,366 @@
+/* General */
+
+*{font-family: 
+    'Michroma', sans-serif;
+}
+
+body{
+    background-color: #0E0E0E;
+    margin:0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+
+  .top-margin-div{
+      width: 100%;
+      height: 44px;
+
+  }
+
+  .content-center{
+    width:80%;
+    margin:auto;
+    padding-bottom: 120px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1{
+    color: white;
+}
+
+h3{
+    font-size: 56px;
+    
+    font-family:'Dela Gothic One', sans-serif;
+    letter-spacing: 1px;
+    color: white;
+}
+
+p{
+    color:white;
+}
+
+
+.section-number{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section-line{
+    width: 100%;
+    margin-top: 20px;
+    height: 1px;
+    background-color: white;
+}
+
+.section-digit{
+    margin:0;
+    margin-top: 10px;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 26px;
+
+}
+
+.section-contact{
+    margin:0;
+    margin-top: 10px;
+    font-size: 14px;
+
+}
+
+/* General  END*/
+
+/*INDEX START*/
+
+
+/* Header*/
+
+nav {
+    background-color: black;
+    position:fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    padding-left: 8px;
+    padding-right: 8px;
+    display: inline;
+}
+
+nav ul li a{
+    color: white;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size:20px;
+    text-transform: uppercase;
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.nav-item{
+    padding-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+/* Header END*/
+
+
+/*Intro*/
+
+.intro{
+    color:white;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 80vh;
+    background-color:#0025AA;
+    margin-top: 44px;
+}
+
+
+
+/* Intro END*/
+
+
+/*Works*/
+
+
+
+/* Works END*/
+.works-view-all{
+    color: white;
+    font-family: 'Dela Gothic One', sans-serif;
+    text-transform: uppercase;
+    font-size: 26px;
+    text-decoration: underline;
+    font-weight: 900;
+
+}
+
+.works-view-all:hover{
+    color:#f33838;
+
+}
+
+.works-headline{
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+    font-size: 94px;
+}
+
+.works-headline-outline{
+    font-size: 94px;
+    font-family: 'Dela Gothic One';
+    overflow-wrap: anywhere;
+    font-weight: 400;
+    -webkit-text-stroke: 2px white;
+    color: #0E0E0E;
+}
+
+/* despues arreglo este de abajo caos con flex o grid*/
+.project-preview-container{
+    margin-top: 5vh;
+    border: solid 1px #32373F;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.project-preview { 
+    width: 380px;
+}
+
+
+
+.project-preview-container .project-preview a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Clients*/
+
+.client-logos {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Clients END*/
+
+
+/*Contact*/
+
+.three-tile{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.three-tile p{
+    margin: 0;
+}
+
+.social div {
+    display:inline;
+    margin-right: 10px;
+}
+
+.contact-info{
+    color: #f33838;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+/* Contact END*/
+
+/*Footer*/
+
+footer{
+    display:block;
+    background-color: black;
+    border:solid 1px black;
+
+}
+
+footer p{
+    color:white;
+    text-align: center;
+}
+/* Footer END*/
+
+/*INDEX END*/
+
+
+
+
+
+/*WORKS START*/
+
+.page-headline{
+    text-align: center;
+    font-weight: 400;
+    font-size: 60px;
+    font-family: 'Dela Gothic One', sans-serif;
+    
+    text-transform: uppercase;
+}
+
+.works-filter{
+    list-style: none;
+    text-align: center;
+    color:white;
+}
+.works-filter li{
+    display: inline;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding:10px;
+    border: solid 1px white;
+    margin-left: 4px;
+    margin-right: 4px;
+
+}
+
+
+.works-grid{
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns:repeat(3,1fr) ;
+    grid-template-rows: repeat(3,1fr);
+    row-gap: 10px;
+    column-gap: 10px;;
+}
+
+.works-grid-medium{
+    color: white;
+    text-align: center;
+    background-color: #f33838;
+    height: 460px;
+    grid-column-start: span 2;
+}
+.works-grid-small{
+    color: white;
+    text-align: center;
+    background-color: #0025AA;
+    height: 460px;
+    grid-column-start: span 1;
+}
+
+.works-grid-large{
+    color: white;
+    text-align: center;
+    background-color: black;
+    height: 460px;
+    grid-column-start: span 3;
+}
+
+/*WORKS END*/
+
+/*PROJECT*/
+
+.project-cover{
+    width: 100%;
+    height: 50vh;
+    background-color: #0025AA;
+    padding-bottom: 3vh;
+}
+
+.content-center-responsive{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1440px;
+    height:inherit;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1440px) {
+    .content-center-responsive {
+      width:100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+.section-number-project{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/*PROJECT END*/
