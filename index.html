@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -36,7 +38,7 @@
     <!-- Intro START -->
     <section>
 
-        <div class="full-intro-container">
+        <div class="full-intro-container intro-background-image">
 
             <div class="center-container">
                 <div class="division-flex">
@@ -55,7 +57,7 @@
 
     </section>
 
-    
+
     <nav class="nav-list-red">
         <a href="#Intro" class="nav-item"><img src="Assets/logo_white.svg" alt="Logo"></a>
 
@@ -81,7 +83,7 @@
                     voluptas modi dolore adipisci placeat, illo doloribus neque soluta dolor unde nam pariatur
                     perspiciatis.
                 </p>
-                <a class="more-info-button" href="Pages/Resume.html">CV completo</a>
+                <a class="more-info-button zoom" href="Pages/Resume.html">CV completo</a>
             </div>
 
 
@@ -108,15 +110,19 @@
 
             <div class="content-box">
                 <h3 class="works-headline">Ultimos <span class="works-headline-outline">Trabajos</span></h3>
-                <a class="more-info-button" href="Pages/Works.html">Ver todos</a>
-        
+                <a class="more-info-button zoom" href="Pages/Works.html">Ver todos</a>
+
                 <div class="project-preview-container">
-                    <div class="project-preview"><a href="Pages/Project.html"><img src="Assets/preview_work.png" alt="Trabajo Caratula 1"></a></div>
-                    <div class="project-preview"><a href="Pages/Project.html"><img src="Assets/preview_work_dark.jpg" alt="Trabajo Caratula 2"></a></div>
-                    <div class="project-preview"><a href="Pages/Project.html"><img src="Assets/preview_work.png" alt="Trabajo Caratula 3"></a></div>
-                    <div class="project-preview"><a href="Pages/Project.html"><img src="Assets/preview_work_dark.jpg" alt="Trabajo Caratula 4"></a></div>
-                    
-                    
+                    <div class="project-preview" data-aos="fade-up" data-aos-duration="500"><a href="Pages/Project.html"><img src="Assets/preview_work.png"
+                                alt="Trabajo Caratula 1"></a></div>
+                    <div class="project-preview" data-aos="fade-up" data-aos-duration="1000"><a href="Pages/Project.html"><img src="Assets/preview_work_dark.jpg"
+                                alt="Trabajo Caratula 2"></a></div>
+                    <div class="project-preview" data-aos="fade-up" data-aos-duration="1500"><a href="Pages/Project.html"><img src="Assets/preview_work.png"
+                                alt="Trabajo Caratula 3"></a></div>
+                    <div class="project-preview" data-aos="fade-up" data-aos-duration="2000"><a href="Pages/Project.html"><img src="Assets/preview_work_dark.jpg"
+                                alt="Trabajo Caratula 4"></a></div>
+
+
                 </div>
             </div>
 
@@ -148,14 +154,14 @@
                     perspiciatis.
                 </p>
                 <div class="client-logos">
-                    <img src="Assets/logo_placeholder.jpg" alt="Cliente 1">
-                    <img src="Assets/logo_placeholder.jpg" alt="Cliente 2">
-                    <img src="Assets/logo_placeholder.jpg" alt="Cliente 3">
-                    <img src="Assets/logo_placeholder.jpg" alt="Cliente 4">
-                    <img src="Assets/logo_placeholder.jpg" alt="Cliente 5">
-                    <img src="Assets/logo_placeholder.jpg" alt="Cliente 6">
-                    <img src="Assets/logo_placeholder.jpg" alt="Cliente 7">
-                    <img src="Assets/logo_placeholder.jpg" alt="Cliente 8">
+                    <img src="Assets/logo_placeholder.jpg" data-aos="fade-up" data-aos-duration="500" alt="Cliente 1">
+                    <img src="Assets/logo_placeholder.jpg" data-aos="fade-up" data-aos-duration="600" alt="Cliente 2">
+                    <img src="Assets/logo_placeholder.jpg" data-aos="fade-up" data-aos-duration="700" alt="Cliente 3">
+                    <img src="Assets/logo_placeholder.jpg" data-aos="fade-up" data-aos-duration="800" alt="Cliente 4">
+                    <img src="Assets/logo_placeholder.jpg" data-aos="fade-up" data-aos-duration="900"alt="Cliente 5">
+                    <img src="Assets/logo_placeholder.jpg" data-aos="fade-up" data-aos-duration="1000" alt="Cliente 6">
+                    <img src="Assets/logo_placeholder.jpg" data-aos="fade-up" data-aos-duration="1200" alt="Cliente 7">
+                    <img src="Assets/logo_placeholder.jpg" data-aos="fade-up" data-aos-duration="1300" alt="Cliente 8">
                 </div>
             </div>
 
@@ -189,13 +195,16 @@
                 <div class="three-tile">
                     <p class="contact-info">email: <strong>gard@email.com</strong></p>
                     <p class="contact-info">tel: <strong>11 9999-9999</strong></p>
-                    
+
                     <div class="social">
-                        <div><a href="#" target="_blank"><img src="Assets/social_icons/LinkedIn.svg" alt="Linkedin"></a></div>
-                        <div><a href="#" target="_blank"><img src="Assets/social_icons/Dribbble.svg" alt="Dribble"></a></div>
-                        <div><a href="#" target="_blank"><img src="Assets/social_icons/Behance.svg" alt="Behance"></a></div>
+                        <div><a href="#" target="_blank"><img src="Assets/social_icons/LinkedIn.svg" alt="Linkedin"></a>
+                        </div>
+                        <div><a href="#" target="_blank"><img src="Assets/social_icons/Dribbble.svg" alt="Dribble"></a>
+                        </div>
+                        <div><a href="#" target="_blank"><img src="Assets/social_icons/Behance.svg" alt="Behance"></a>
+                        </div>
                     </div>
-            </div>
+                </div>
             </div>
 
 
@@ -215,6 +224,13 @@
         </div>
     </footer>
     <!-- Footer END  -->
+
+    <!-- AOS script START-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- AOS script END-->
 
 
 </body>

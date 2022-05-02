@@ -240,11 +240,14 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+
+}
+
+.intro-background-image{
     background-image:url("Assets/intro_animation.gif") ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
 }
 
 .color-box-full {
@@ -839,3 +842,18 @@ footer p {
 
 
 /* WIP END*/
+
+/* ANIMATIONS CSS START*/
+
+.zoom{
+    
+  transition:transform .2s ease; /* Animation */
+  
+  transform-origin: left top;
+}
+
+.zoom:hover {
+    transform: scale(1.02);
+  }
+
+/* ANIMATIONS CSS END*/
