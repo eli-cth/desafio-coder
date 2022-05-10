@@ -29,10 +29,12 @@ h3 {
     overflow-wrap: anywhere;
     font-family: 'Dela Gothic One', sans-serif;
     color: white;
+    margin-bottom: 40px;
 }
 
 p {
     color: white;
+    line-height: 1.8;
 }
 
 
@@ -203,6 +205,13 @@ nav ul li a {
 
 }
 
+.div-top-margin {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    background-color: #212529;
+}
+
 /* mobile - hasta un maximo de 579px */
 @media (max-width:586px) {
 
@@ -243,12 +252,14 @@ nav ul li a {
 
 }
 
-.intro-background-image{
-    background-image:url("Assets/intro_animation.gif") ;
+.intro-background-image {
+    background-image: url("Assets/intro_animation_trans.gif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+
 
 .color-box-full {
     color: white;
@@ -401,7 +412,7 @@ nav ul li a {
 
 .contact-info {
     color: #f33838;
-    font-size: 26px;
+    font-size: 32px;
     letter-spacing: 2px;
     overflow-wrap: anywhere;
 }
@@ -549,6 +560,7 @@ footer p {
     border: solid 1px white;
     margin-left: 4px;
     margin-right: 4px;
+    margin-bottom: 8px;
 
 }
 
@@ -630,7 +642,7 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: blue;
+    /*background-color: blue;*/
     height: 30vh;
 }
 
@@ -727,8 +739,12 @@ footer p {
 }
 
 
-.project-flex-medium {
-    background-color: #f56b34;
+.background-red{
+    background-color: #c23037;
+}
+
+.background-dark{
+    background-color: #111111;
 }
 
 .project-flex-small img {
@@ -779,18 +795,58 @@ footer p {
 
 }
 
+.project-image-fit{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.project-image-fit iframe{
+    width: 100%;
+    height: 100%;
+
+}
+
+.container-iframe {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  }
+  
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+.gancia-background-image {
+    background-image: url("Assets/project/gancia/gancia_header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
 
 /* PROJECT END*/
 
 /* WIP START*/
 
-.wip-headline h1{
-    font-size:40px ;
+.wip-headline h1 {
+    font-size: 40px;
     margin-bottom: 40px;
     overflow-wrap: anywhere;
 }
 
-.wip-text{
+.wip-text {
     text-align: center;
     margin-bottom: 80px;
 }
@@ -804,7 +860,8 @@ footer p {
     }
 
 }
-.basic-flex{
+
+.basic-flex {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -814,7 +871,7 @@ footer p {
     margin-bottom: 80px;
 }
 
-.basic-flex img{
+.basic-flex img {
     width: 400px;
     object-fit: cover;
 }
@@ -845,15 +902,16 @@ footer p {
 
 /* ANIMATIONS CSS START*/
 
-.zoom{
-    
-  transition:transform .2s ease; /* Animation */
-  
-  transform-origin: left top;
+.zoom {
+
+    transition: transform .2s ease;
+    /* Animation */
+
+    transform-origin: left top;
 }
 
 .zoom:hover {
     transform: scale(1.02);
-  }
+}
 
 /* ANIMATIONS CSS END*/
