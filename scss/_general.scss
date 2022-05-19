@@ -1,0 +1,142 @@
+/* colors */
+
+$main-bg-color: #1d1d1d;
+$secondary-bg-color: #e02b2b;
+$p-font-color: white;
+$primary-font-color: #a5a5a5;
+$secondary-font-color: #e02b2b;
+
+/* font size */
+$text-large: 78px;
+$text-medium: 26px;
+$text-normal: 18px;
+$text-small: 12px;
+
+/* font size map*/
+$font-size: ("headline":56px, "subline":32px, "topline":20px,);
+
+
+
+/* General tags */
+
+* {
+    margin: 0;
+    padding: 0;
+    color: $p-font-color;
+    font-family: 'Michroma', sans-serif;
+}
+
+
+body {
+    background-color: $main-bg-color;
+}
+
+.div-top-margin {
+    width: 100%;
+    height: 56px;
+    display: flex;
+}
+
+/* text tags */
+
+.resume-section-name {
+    font-family: 'Michroma', sans-serif;
+    font-size: $text-medium;
+    font-weight: 400;
+    color: $primary-font-color;
+
+
+}
+
+.page-headline {
+    color: $p-font-color;
+    text-align: center;
+    font-weight: 400;
+    font-size: $text-large;
+    font-family: 'Dela Gothic One', sans-serif;
+    overflow-wrap: anywhere;
+    text-transform: uppercase;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+@mixin headline-spacing {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    
+}
+
+h1{
+    display: none;
+}
+
+h3 {
+    
+    font-size: map-get($font-size, headline);
+    overflow-wrap: anywhere;
+    font-family: 'Dela Gothic One', sans-serif;
+    color: $p-font-color;
+    @include headline-spacing;
+}
+
+p {
+    color: $p-font-color;
+    line-height: 1.8;
+
+    /* mobile - hasta un maximo de 666px */
+    @media (max-width:666px) {
+        font-size: 18px;
+
+    }
+
+    /* tablet -entre 661 y 1439 */
+    @media (min-width:661px) and (max-width:1439px) {
+        font-size: 18px;
+    }
+}
+
+.caps-headline {
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+    font-size: 94px;
+    font-family: 'Dela Gothic One';
+    font-weight: 400;
+    @include headline-spacing;
+
+    /* mobile - hasta un maximo de 666px */
+    @media (max-width:666px) {
+        font-size: 44px;
+
+    }
+
+    /* tablet -entre 661 y 1439 */
+    @media (min-width:661px) and (max-width:1439px) {
+        font-size: 74px;
+    }
+}
+
+    .caps-headline-outline {
+        @extend .caps-headline;
+        -webkit-text-stroke: 2px white;
+        color: $main-bg-color;
+    }
+
+
+    /* Buttons */
+
+    .more-info-button {
+        display: block;
+        color: $p-font-color;
+        font-family: 'Dela Gothic One', sans-serif;
+        text-transform: uppercase;
+        font-size: $text-medium;
+        text-decoration: underline;
+        font-weight: 400;
+        margin-top: 3vh;
+
+    }
+
+    .more-info-button:hover {
+        color: $secondary-font-color;
+
+    }

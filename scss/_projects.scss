@@ -1,0 +1,211 @@
+@import "sections";
+@import "general";
+
+/* PROJECT START*/
+
+.color-box-mid {
+    color: white;
+    font-size: 2vh;
+    @include flex-column;
+    justify-content: flex-end;
+    height: 30vh;
+
+    /* mobile - hasta un maximo de 480px */
+    @media (max-width:480px) {
+        height: 60vh;
+    }
+
+    .project-name {
+        font-family: 'Dela Gothic One', sans-serif;
+        font-size: 36px;
+        font-weight: 400;
+    }
+
+    .project-description {
+        padding-bottom: 3vh;
+        font-size: 14px;
+
+    }
+
+}
+
+@mixin image-bundle-margin {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.project-tag {
+    font-size: 12px;
+    font-weight: 900;
+    color: white;
+}
+
+.project-container {
+    margin-top: 10vh;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 2px;
+}
+
+.project-columns-full {
+    @include image-bundle-margin;
+    grid-column-start: span 8;
+    
+    img {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+.project-columns-four {
+    @include image-bundle-margin;
+    grid-column-start: span 4;
+
+    /* hasta un maximo de 940px */
+    @media (max-width:940px) {
+
+
+        grid-column-start: span 8;
+
+
+    }
+    img {
+        display: block;
+        width: 100%;
+
+    }
+    
+}
+
+.project-columns-six {
+    @include image-bundle-margin;
+    grid-column-start: span 6;
+    
+    img {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+.project-columns-two {
+    @include image-bundle-margin;
+    grid-column-start: span 2;
+    
+    img {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+
+
+
+.project-flex {
+    @include flex-row-wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project-flex-small {
+    img {
+        display: block;
+    }
+
+}
+
+
+.background-red {
+    background-color: #c23037;
+}
+
+.background-dark {
+    background-color: #111111;
+}
+
+.three-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 20px;
+
+
+    .three-columns-tile {
+        grid-column-start: span 1;
+
+        /* mobile - hasta un maximo de 480px */
+        @media (max-width:480px) {
+            grid-column-start: span 3;
+        }
+
+        div {
+            img {
+                display: block;
+                width: 100%;
+
+            }
+        }
+
+    }
+}
+
+
+
+
+
+.project-image-fit {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    /* hasta un maximo de 680px */
+    @media (max-width:680px) {
+
+        img {
+            height: 60vh;
+            object-fit: cover;
+
+        }
+
+    }
+
+}
+
+
+.container-iframe {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Project covers*/
+
+.gancia-background-image {
+    background-image: url("../Assets/project/gancia/gancia_header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* PROJECT END*/

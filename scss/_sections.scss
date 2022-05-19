@@ -1,0 +1,336 @@
+@import "general";
+
+@mixin center-content-desktop {
+
+    width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+
+@mixin section-padding {
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+@mixin flex-column {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+@mixin flex-column-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@mixin flex-row {
+
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-row-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.container {
+    @include center-content-desktop;
+    @include section-padding;
+
+    /* mobile - hasta un maximo de 450px */
+    @media (max-width:450px) {
+        width: 90vw;
+    }
+
+    /* tablet -entre 451 y 1439 */
+    @media (min-width:451px) and (max-width:1439px) {
+        width: 86vw;
+    }
+
+    /* desktop - pantalla mayor de 1440 */
+    @media (min-width:1440px) {
+        width: 1440px;
+
+    }
+}
+
+
+
+
+
+
+/* section division START */
+.division-flex {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+
+
+    .division-line {
+
+        height: 1px;
+        background-color: white;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    p {
+
+        color: white;
+        font-size: 10px;
+        letter-spacing: 1px;
+
+        font-family: 'Michroma', sans-serif;
+    }
+
+    h4 {
+
+        font-weight: 400;
+        color: white;
+        font-family: 'Dela Gothic One', sans-serif;
+        font-size: 22px;
+    }
+}
+
+/* section division END */
+
+
+/* Intro START */
+
+.full-intro-container {
+    width: 100%;
+    background-color: $secondary-font-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+
+@mixin image-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.intro-background-image {
+    background-image: url("../Assets/intro_animation_trans.gif");
+    @include image-cover;
+}
+
+.color-box-full {
+    @include flex-column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 90vh;
+    margin: 10px;
+
+    img {
+        width: 80%;
+    }
+
+    p {
+        color: black;
+        padding-top: 28px;
+        font-size: 22px;
+        font-weight: 700;
+
+        /* mobile - hasta un maximo de 666px */
+        @media (max-width:666px) {
+            font-size: 18px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+        }
+
+        /* tablet -entre 661 y 1439 */
+        @media (min-width:661px) and (max-width:1439px) {
+            font-size: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+
+/* Intro END */
+
+
+/* Works START */
+.project-preview-container {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    .project-preview {
+        grid-column-start: span 1;
+
+        @media (min-width:451px) and (max-width:1439px) {
+            grid-column-start: span 2;
+        }
+
+        @media (max-width:450px) {
+            grid-column-start: span 4;
+        }
+
+
+
+        a img {
+            display: block;
+            width: 100%;
+        }
+
+    }
+}
+
+/* Works END */
+
+
+/*Clients START*/
+
+.client-logos {
+    @include flex-row-wrap;
+    justify-content: center;
+    margin-top: 4vh;
+    margin-bottom: 6vh;
+
+    img {
+        margin: 30px;
+    }
+}
+
+
+/*Clients END*/
+
+/*Contact*/
+
+.three-tile {
+    @include flex-row-wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+
+    .social div {
+        display: inline;
+        margin-right: 10px;
+    }
+
+    .contact-info {
+        color: $secondary-bg-color;
+        font-size: 32px;
+        letter-spacing: 2px;
+        overflow-wrap: anywhere;
+        font-weight: 900;
+
+
+        /* mobile - hasta un maximo de 666px */
+        @media (max-width:666px) {
+            font-size: 22px;
+
+        }
+
+        /* tablet -entre 661 y 1439 */
+        @media (min-width:661px) and (max-width:1439px) {
+            font-size: 28px;
+        }
+    }
+}
+
+
+/* Contact END*/
+
+
+
+/*Footer START*/
+
+footer {
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+
+
+    div {
+        margin: 30px;
+
+        p {
+            color: white;
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+}
+
+
+
+
+
+/*Footer END*/
+
+
+
+
+/*Resume START*/
+
+
+.job-title {
+    h4 {
+        font-weight: 400;
+        font-size: 36px;
+        overflow-wrap: anywhere;
+        font-family: 'Dela Gothic One', sans-serif;
+        color: white;
+    }
+
+    h6 {
+        font-weight: 400;
+        font-size: 22px;
+        overflow-wrap: anywhere;
+        font-family: 'Dela Gothic One', sans-serif;
+        color: gray;
+
+        span {
+            font-weight: 400;
+            font-size: 22px;
+            overflow-wrap: anywhere;
+            font-family: 'Dela Gothic One', sans-serif;
+            color: #f33838;
+        }
+
+    }
+
+    p {
+        margin-top: 3vh;
+        font-family: 'Michroma', sans-serif;
+        color: white;
+        line-height: 2;
+
+
+
+    }
+
+}
+
+.job-title-spacing {
+    padding-bottom: 80px;
+}
+
+/*Resume END*/
