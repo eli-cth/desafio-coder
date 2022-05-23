@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   color: white;
-  font-family: 'Michroma', sans-serif;
+  font-family: "Michroma", sans-serif;
 }
 
 body {
@@ -16,14 +16,12 @@ body {
 .div-top-margin {
   width: 100%;
   height: 56px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 /* text tags */
 .resume-section-name {
-  font-family: 'Michroma', sans-serif;
+  font-family: "Michroma", sans-serif;
   font-size: 26px;
   font-weight: 400;
   color: #a5a5a5;
@@ -34,11 +32,23 @@ body {
   text-align: center;
   font-weight: 400;
   font-size: 78px;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   overflow-wrap: anywhere;
   text-transform: uppercase;
   margin-bottom: 5vh;
   margin-top: 5vh;
+  /* mobile - hasta un maximo de 666px */
+  /* tablet -entre 661 y 1439 */
+}
+@media (max-width: 666px) {
+  .page-headline {
+    font-size: 48px;
+  }
+}
+@media (min-width: 661px) and (max-width: 1439px) {
+  .page-headline {
+    font-size: 62px;
+  }
 }
 
 h1 {
@@ -48,7 +58,7 @@ h1 {
 h3 {
   font-size: 56px;
   overflow-wrap: anywhere;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   color: white;
   padding-top: 60px;
   padding-bottom: 40px;
@@ -60,13 +70,11 @@ p {
   /* mobile - hasta un maximo de 666px */
   /* tablet -entre 661 y 1439 */
 }
-
 @media (max-width: 666px) {
   p {
     font-size: 18px;
   }
 }
-
 @media (min-width: 661px) and (max-width: 1439px) {
   p {
     font-size: 18px;
@@ -77,20 +85,18 @@ p {
   text-transform: uppercase;
   overflow-wrap: anywhere;
   font-size: 94px;
-  font-family: 'Dela Gothic One';
+  font-family: "Dela Gothic One";
   font-weight: 400;
   padding-top: 60px;
   padding-bottom: 40px;
   /* mobile - hasta un maximo de 666px */
   /* tablet -entre 661 y 1439 */
 }
-
 @media (max-width: 666px) {
   .caps-headline, .caps-headline-outline {
     font-size: 44px;
   }
 }
-
 @media (min-width: 661px) and (max-width: 1439px) {
   .caps-headline, .caps-headline-outline {
     font-size: 74px;
@@ -106,7 +112,7 @@ p {
 .more-info-button {
   display: block;
   color: white;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   text-transform: uppercase;
   font-size: 26px;
   text-decoration: underline;
@@ -118,80 +124,89 @@ p {
   color: #e02b2b;
 }
 
+.download-circle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 56px;
+  width: 56px;
+  background-color: black;
+  border-radius: 50%;
+}
+.download-circle-button:hover {
+  background-color: #f33838;
+}
+.download-circle-button svg {
+  color: black;
+}
+
+.download-button-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 3vh;
+}
+.download-button-text p {
+  margin-left: 16px;
+  margin-bottom: 0;
+}
+
 .container {
   width: 1440px;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding-top: 60px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 20px;
   padding-bottom: 100px;
   /* mobile - hasta un maximo de 450px */
   /* tablet -entre 451 y 1439 */
   /* desktop - pantalla mayor de 1440 */
 }
-
 @media (max-width: 450px) {
   .container {
     width: 90vw;
   }
 }
-
 @media (min-width: 451px) and (max-width: 1439px) {
   .container {
     width: 86vw;
   }
 }
-
 @media (min-width: 1440px) {
   .container {
     width: 1440px;
   }
 }
+.container--compact {
+  padding-bottom: 20px;
+}
 
 /* section division START */
 .division-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
-
 .division-flex .division-line {
   height: 1px;
   background-color: white;
   width: 100%;
   margin-top: 10px;
 }
-
 .division-flex p {
   color: white;
   font-size: 10px;
   letter-spacing: 1px;
-  font-family: 'Michroma', sans-serif;
+  font-family: "Michroma", sans-serif;
 }
-
 .division-flex h4 {
   font-weight: 400;
   color: white;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   font-size: 22px;
 }
 
@@ -200,18 +215,10 @@ p {
 .full-intro-container {
   width: 100%;
   background-color: #e02b2b;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 .intro-background-image {
@@ -222,29 +229,18 @@ p {
 }
 
 .color-box-full {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: white;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   height: 90vh;
   margin: 10px;
 }
-
 .color-box-full img {
   width: 80%;
 }
-
 .color-box-full p {
   color: black;
   padding-top: 28px;
@@ -253,7 +249,6 @@ p {
   /* mobile - hasta un maximo de 666px */
   /* tablet -entre 661 y 1439 */
 }
-
 @media (max-width: 666px) {
   .color-box-full p {
     font-size: 18px;
@@ -261,7 +256,6 @@ p {
     padding-right: 10px;
   }
 }
-
 @media (min-width: 661px) and (max-width: 1439px) {
   .color-box-full p {
     font-size: 20px;
@@ -275,30 +269,23 @@ p {
 .project-preview-container {
   margin-top: 30px;
   margin-bottom: 60px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
 }
-
 .project-preview-container .project-preview {
-      grid-column-start: span 1;
+  grid-column-start: span 1;
 }
-
 @media (min-width: 451px) and (max-width: 1439px) {
   .project-preview-container .project-preview {
-        grid-column-start: span 2;
+    grid-column-start: span 2;
   }
 }
-
 @media (max-width: 450px) {
   .project-preview-container .project-preview {
-        grid-column-start: span 4;
+    grid-column-start: span 4;
   }
 }
-
 .project-preview-container .project-preview a img {
   display: block;
   width: 100%;
@@ -307,22 +294,13 @@ p {
 /* Works END */
 /*Clients START*/
 .client-logos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 4vh;
   margin-bottom: 6vh;
 }
-
 .client-logos img {
   margin: 30px;
 }
@@ -330,29 +308,17 @@ p {
 /*Clients END*/
 /*Contact*/
 .three-tile {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 60px;
 }
-
 .three-tile .social div {
   display: inline;
   margin-right: 10px;
 }
-
 .three-tile .contact-info {
   color: #e02b2b;
   font-size: 32px;
@@ -362,13 +328,11 @@ p {
   /* mobile - hasta un maximo de 666px */
   /* tablet -entre 661 y 1439 */
 }
-
 @media (max-width: 666px) {
   .three-tile .contact-info {
     font-size: 22px;
   }
 }
-
 @media (min-width: 661px) and (max-width: 1439px) {
   .three-tile .contact-info {
     font-size: 28px;
@@ -378,26 +342,15 @@ p {
 /* Contact END*/
 /*Footer START*/
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: black;
 }
-
 footer div {
   margin: 30px;
 }
-
 footer div p {
   color: white;
   text-align: center;
@@ -410,29 +363,26 @@ footer div p {
   font-weight: 400;
   font-size: 36px;
   overflow-wrap: anywhere;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   color: white;
 }
-
 .job-title h6 {
   font-weight: 400;
   font-size: 22px;
   overflow-wrap: anywhere;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   color: gray;
 }
-
 .job-title h6 span {
   font-weight: 400;
   font-size: 22px;
   overflow-wrap: anywhere;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   color: #f33838;
 }
-
 .job-title p {
   margin-top: 3vh;
-  font-family: 'Michroma', sans-serif;
+  font-family: "Michroma", sans-serif;
   color: white;
   line-height: 2;
 }
@@ -442,6 +392,122 @@ footer div p {
 }
 
 /*Resume END*/
+/*WORKS PAGE START*/
+.works-filter {
+  list-style: none;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* hasta un maximo de 500px */
+}
+@media (max-width: 500px) {
+  .works-filter {
+    display: none;
+  }
+}
+.works-filter li {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px;
+  border: solid 1px white;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 8px;
+}
+
+.works-grid {
+  width: 100%;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.works-grid-medium {
+  color: white;
+  background-color: #f33838;
+  height: 460px;
+  grid-column-start: span 2;
+  /* hasta un maximo de 900px */
+}
+@media (max-width: 900px) {
+  .works-grid-medium {
+    grid-column-start: span 3;
+    height: 360px;
+  }
+}
+
+.works-grid-small {
+  color: white;
+  text-align: center;
+  background-color: #0025AA;
+  height: 460px;
+  grid-column-start: span 1;
+  /* hasta un maximo de 900px */
+}
+@media (max-width: 900px) {
+  .works-grid-small {
+    grid-column-start: span 3;
+    height: 360px;
+  }
+}
+
+.works-grid-large {
+  color: white;
+  text-align: center;
+  background-color: black;
+  height: 460px;
+  grid-column-start: span 3;
+  /* hasta un maximo de 900px */
+}
+@media (max-width: 900px) {
+  .works-grid-large {
+    height: 360px;
+  }
+}
+
+.works-project-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*WORKS PAGE END*/
+/*WIP PAGE START*/
+.wip-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.wip-centered p {
+  font-size: 20px;
+}
+.wip-centered p span {
+  color: #e02b2b;
+}
+.wip-centered img {
+  display: block;
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  padding-top: 50px;
+}
+@media (max-width: 400px) {
+  .wip-centered img {
+    width: 100%;
+  }
+}
+
+/*WIP PAGE END*/
 /* colors */
 /* font size */
 /* font size map*/
@@ -450,7 +516,7 @@ footer div p {
   margin: 0;
   padding: 0;
   color: white;
-  font-family: 'Michroma', sans-serif;
+  font-family: "Michroma", sans-serif;
 }
 
 body {
@@ -460,14 +526,12 @@ body {
 .div-top-margin {
   width: 100%;
   height: 56px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 /* text tags */
 .resume-section-name {
-  font-family: 'Michroma', sans-serif;
+  font-family: "Michroma", sans-serif;
   font-size: 26px;
   font-weight: 400;
   color: #a5a5a5;
@@ -478,11 +542,23 @@ body {
   text-align: center;
   font-weight: 400;
   font-size: 78px;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   overflow-wrap: anywhere;
   text-transform: uppercase;
   margin-bottom: 5vh;
   margin-top: 5vh;
+  /* mobile - hasta un maximo de 666px */
+  /* tablet -entre 661 y 1439 */
+}
+@media (max-width: 666px) {
+  .page-headline {
+    font-size: 48px;
+  }
+}
+@media (min-width: 661px) and (max-width: 1439px) {
+  .page-headline {
+    font-size: 62px;
+  }
 }
 
 h1 {
@@ -492,7 +568,7 @@ h1 {
 h3 {
   font-size: 56px;
   overflow-wrap: anywhere;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   color: white;
   padding-top: 60px;
   padding-bottom: 40px;
@@ -504,13 +580,11 @@ p {
   /* mobile - hasta un maximo de 666px */
   /* tablet -entre 661 y 1439 */
 }
-
 @media (max-width: 666px) {
   p {
     font-size: 18px;
   }
 }
-
 @media (min-width: 661px) and (max-width: 1439px) {
   p {
     font-size: 18px;
@@ -521,20 +595,18 @@ p {
   text-transform: uppercase;
   overflow-wrap: anywhere;
   font-size: 94px;
-  font-family: 'Dela Gothic One';
+  font-family: "Dela Gothic One";
   font-weight: 400;
   padding-top: 60px;
   padding-bottom: 40px;
   /* mobile - hasta un maximo de 666px */
   /* tablet -entre 661 y 1439 */
 }
-
 @media (max-width: 666px) {
   .caps-headline, .caps-headline-outline {
     font-size: 44px;
   }
 }
-
 @media (min-width: 661px) and (max-width: 1439px) {
   .caps-headline, .caps-headline-outline {
     font-size: 74px;
@@ -550,7 +622,7 @@ p {
 .more-info-button {
   display: block;
   color: white;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   text-transform: uppercase;
   font-size: 26px;
   text-decoration: underline;
@@ -562,6 +634,34 @@ p {
   color: #e02b2b;
 }
 
+.download-circle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 56px;
+  width: 56px;
+  background-color: black;
+  border-radius: 50%;
+}
+.download-circle-button:hover {
+  background-color: #f33838;
+}
+.download-circle-button svg {
+  color: black;
+}
+
+.download-button-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 3vh;
+}
+.download-button-text p {
+  margin-left: 16px;
+  margin-bottom: 0;
+}
+
 /* colors */
 /* font size */
 /* font size map*/
@@ -570,7 +670,7 @@ p {
   margin: 0;
   padding: 0;
   color: white;
-  font-family: 'Michroma', sans-serif;
+  font-family: "Michroma", sans-serif;
 }
 
 body {
@@ -580,14 +680,12 @@ body {
 .div-top-margin {
   width: 100%;
   height: 56px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 /* text tags */
 .resume-section-name {
-  font-family: 'Michroma', sans-serif;
+  font-family: "Michroma", sans-serif;
   font-size: 26px;
   font-weight: 400;
   color: #a5a5a5;
@@ -598,11 +696,23 @@ body {
   text-align: center;
   font-weight: 400;
   font-size: 78px;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   overflow-wrap: anywhere;
   text-transform: uppercase;
   margin-bottom: 5vh;
   margin-top: 5vh;
+  /* mobile - hasta un maximo de 666px */
+  /* tablet -entre 661 y 1439 */
+}
+@media (max-width: 666px) {
+  .page-headline {
+    font-size: 48px;
+  }
+}
+@media (min-width: 661px) and (max-width: 1439px) {
+  .page-headline {
+    font-size: 62px;
+  }
 }
 
 h1 {
@@ -612,7 +722,7 @@ h1 {
 h3 {
   font-size: 56px;
   overflow-wrap: anywhere;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   color: white;
   padding-top: 60px;
   padding-bottom: 40px;
@@ -624,13 +734,11 @@ p {
   /* mobile - hasta un maximo de 666px */
   /* tablet -entre 661 y 1439 */
 }
-
 @media (max-width: 666px) {
   p {
     font-size: 18px;
   }
 }
-
 @media (min-width: 661px) and (max-width: 1439px) {
   p {
     font-size: 18px;
@@ -641,20 +749,18 @@ p {
   text-transform: uppercase;
   overflow-wrap: anywhere;
   font-size: 94px;
-  font-family: 'Dela Gothic One';
+  font-family: "Dela Gothic One";
   font-weight: 400;
   padding-top: 60px;
   padding-bottom: 40px;
   /* mobile - hasta un maximo de 666px */
   /* tablet -entre 661 y 1439 */
 }
-
 @media (max-width: 666px) {
   .caps-headline, .caps-headline-outline {
     font-size: 44px;
   }
 }
-
 @media (min-width: 661px) and (max-width: 1439px) {
   .caps-headline, .caps-headline-outline {
     font-size: 74px;
@@ -670,7 +776,7 @@ p {
 .more-info-button {
   display: block;
   color: white;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   text-transform: uppercase;
   font-size: 26px;
   text-decoration: underline;
@@ -680,82 +786,91 @@ p {
 
 .more-info-button:hover {
   color: #e02b2b;
+}
+
+.download-circle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 56px;
+  width: 56px;
+  background-color: black;
+  border-radius: 50%;
+}
+.download-circle-button:hover {
+  background-color: #f33838;
+}
+.download-circle-button svg {
+  color: black;
+}
+
+.download-button-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 3vh;
+}
+.download-button-text p {
+  margin-left: 16px;
+  margin-bottom: 0;
 }
 
 .container {
   width: 1440px;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding-top: 60px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 20px;
   padding-bottom: 100px;
   /* mobile - hasta un maximo de 450px */
   /* tablet -entre 451 y 1439 */
   /* desktop - pantalla mayor de 1440 */
 }
-
 @media (max-width: 450px) {
   .container {
     width: 90vw;
   }
 }
-
 @media (min-width: 451px) and (max-width: 1439px) {
   .container {
     width: 86vw;
   }
 }
-
 @media (min-width: 1440px) {
   .container {
     width: 1440px;
   }
 }
+.container--compact {
+  padding-bottom: 20px;
+}
 
 /* section division START */
 .division-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
-
 .division-flex .division-line {
   height: 1px;
   background-color: white;
   width: 100%;
   margin-top: 10px;
 }
-
 .division-flex p {
   color: white;
   font-size: 10px;
   letter-spacing: 1px;
-  font-family: 'Michroma', sans-serif;
+  font-family: "Michroma", sans-serif;
 }
-
 .division-flex h4 {
   font-weight: 400;
   color: white;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   font-size: 22px;
 }
 
@@ -764,18 +879,10 @@ p {
 .full-intro-container {
   width: 100%;
   background-color: #e02b2b;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 .intro-background-image {
@@ -786,29 +893,18 @@ p {
 }
 
 .color-box-full {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: white;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   height: 90vh;
   margin: 10px;
 }
-
 .color-box-full img {
   width: 80%;
 }
-
 .color-box-full p {
   color: black;
   padding-top: 28px;
@@ -817,7 +913,6 @@ p {
   /* mobile - hasta un maximo de 666px */
   /* tablet -entre 661 y 1439 */
 }
-
 @media (max-width: 666px) {
   .color-box-full p {
     font-size: 18px;
@@ -825,7 +920,6 @@ p {
     padding-right: 10px;
   }
 }
-
 @media (min-width: 661px) and (max-width: 1439px) {
   .color-box-full p {
     font-size: 20px;
@@ -839,30 +933,23 @@ p {
 .project-preview-container {
   margin-top: 30px;
   margin-bottom: 60px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
 }
-
 .project-preview-container .project-preview {
-      grid-column-start: span 1;
+  grid-column-start: span 1;
 }
-
 @media (min-width: 451px) and (max-width: 1439px) {
   .project-preview-container .project-preview {
-        grid-column-start: span 2;
+    grid-column-start: span 2;
   }
 }
-
 @media (max-width: 450px) {
   .project-preview-container .project-preview {
-        grid-column-start: span 4;
+    grid-column-start: span 4;
   }
 }
-
 .project-preview-container .project-preview a img {
   display: block;
   width: 100%;
@@ -871,22 +958,13 @@ p {
 /* Works END */
 /*Clients START*/
 .client-logos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 4vh;
   margin-bottom: 6vh;
 }
-
 .client-logos img {
   margin: 30px;
 }
@@ -894,29 +972,17 @@ p {
 /*Clients END*/
 /*Contact*/
 .three-tile {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 60px;
 }
-
 .three-tile .social div {
   display: inline;
   margin-right: 10px;
 }
-
 .three-tile .contact-info {
   color: #e02b2b;
   font-size: 32px;
@@ -926,13 +992,11 @@ p {
   /* mobile - hasta un maximo de 666px */
   /* tablet -entre 661 y 1439 */
 }
-
 @media (max-width: 666px) {
   .three-tile .contact-info {
     font-size: 22px;
   }
 }
-
 @media (min-width: 661px) and (max-width: 1439px) {
   .three-tile .contact-info {
     font-size: 28px;
@@ -942,26 +1006,15 @@ p {
 /* Contact END*/
 /*Footer START*/
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: black;
 }
-
 footer div {
   margin: 30px;
 }
-
 footer div p {
   color: white;
   text-align: center;
@@ -974,29 +1027,26 @@ footer div p {
   font-weight: 400;
   font-size: 36px;
   overflow-wrap: anywhere;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   color: white;
 }
-
 .job-title h6 {
   font-weight: 400;
   font-size: 22px;
   overflow-wrap: anywhere;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   color: gray;
 }
-
 .job-title h6 span {
   font-weight: 400;
   font-size: 22px;
   overflow-wrap: anywhere;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   color: #f33838;
 }
-
 .job-title p {
   margin-top: 3vh;
-  font-family: 'Michroma', sans-serif;
+  font-family: "Michroma", sans-serif;
   color: white;
   line-height: 2;
 }
@@ -1006,6 +1056,122 @@ footer div p {
 }
 
 /*Resume END*/
+/*WORKS PAGE START*/
+.works-filter {
+  list-style: none;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* hasta un maximo de 500px */
+}
+@media (max-width: 500px) {
+  .works-filter {
+    display: none;
+  }
+}
+.works-filter li {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px;
+  border: solid 1px white;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 8px;
+}
+
+.works-grid {
+  width: 100%;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.works-grid-medium {
+  color: white;
+  background-color: #f33838;
+  height: 460px;
+  grid-column-start: span 2;
+  /* hasta un maximo de 900px */
+}
+@media (max-width: 900px) {
+  .works-grid-medium {
+    grid-column-start: span 3;
+    height: 360px;
+  }
+}
+
+.works-grid-small {
+  color: white;
+  text-align: center;
+  background-color: #0025AA;
+  height: 460px;
+  grid-column-start: span 1;
+  /* hasta un maximo de 900px */
+}
+@media (max-width: 900px) {
+  .works-grid-small {
+    grid-column-start: span 3;
+    height: 360px;
+  }
+}
+
+.works-grid-large {
+  color: white;
+  text-align: center;
+  background-color: black;
+  height: 460px;
+  grid-column-start: span 3;
+  /* hasta un maximo de 900px */
+}
+@media (max-width: 900px) {
+  .works-grid-large {
+    height: 360px;
+  }
+}
+
+.works-project-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*WORKS PAGE END*/
+/*WIP PAGE START*/
+.wip-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.wip-centered p {
+  font-size: 20px;
+}
+.wip-centered p span {
+  color: #e02b2b;
+}
+.wip-centered img {
+  display: block;
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  padding-top: 50px;
+}
+@media (max-width: 400px) {
+  .wip-centered img {
+    width: 100%;
+  }
+}
+
+/*WIP PAGE END*/
 /* colors */
 /* font size */
 /* font size map*/
@@ -1014,7 +1180,7 @@ footer div p {
   margin: 0;
   padding: 0;
   color: white;
-  font-family: 'Michroma', sans-serif;
+  font-family: "Michroma", sans-serif;
 }
 
 body {
@@ -1024,14 +1190,12 @@ body {
 .div-top-margin {
   width: 100%;
   height: 56px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 /* text tags */
 .resume-section-name {
-  font-family: 'Michroma', sans-serif;
+  font-family: "Michroma", sans-serif;
   font-size: 26px;
   font-weight: 400;
   color: #a5a5a5;
@@ -1042,11 +1206,23 @@ body {
   text-align: center;
   font-weight: 400;
   font-size: 78px;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   overflow-wrap: anywhere;
   text-transform: uppercase;
   margin-bottom: 5vh;
   margin-top: 5vh;
+  /* mobile - hasta un maximo de 666px */
+  /* tablet -entre 661 y 1439 */
+}
+@media (max-width: 666px) {
+  .page-headline {
+    font-size: 48px;
+  }
+}
+@media (min-width: 661px) and (max-width: 1439px) {
+  .page-headline {
+    font-size: 62px;
+  }
 }
 
 h1 {
@@ -1056,7 +1232,7 @@ h1 {
 h3 {
   font-size: 56px;
   overflow-wrap: anywhere;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   color: white;
   padding-top: 60px;
   padding-bottom: 40px;
@@ -1068,13 +1244,11 @@ p {
   /* mobile - hasta un maximo de 666px */
   /* tablet -entre 661 y 1439 */
 }
-
 @media (max-width: 666px) {
   p {
     font-size: 18px;
   }
 }
-
 @media (min-width: 661px) and (max-width: 1439px) {
   p {
     font-size: 18px;
@@ -1085,20 +1259,18 @@ p {
   text-transform: uppercase;
   overflow-wrap: anywhere;
   font-size: 94px;
-  font-family: 'Dela Gothic One';
+  font-family: "Dela Gothic One";
   font-weight: 400;
   padding-top: 60px;
   padding-bottom: 40px;
   /* mobile - hasta un maximo de 666px */
   /* tablet -entre 661 y 1439 */
 }
-
 @media (max-width: 666px) {
   .caps-headline, .caps-headline-outline {
     font-size: 44px;
   }
 }
-
 @media (min-width: 661px) and (max-width: 1439px) {
   .caps-headline, .caps-headline-outline {
     font-size: 74px;
@@ -1114,7 +1286,7 @@ p {
 .more-info-button {
   display: block;
   color: white;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   text-transform: uppercase;
   font-size: 26px;
   text-decoration: underline;
@@ -1124,38 +1296,56 @@ p {
 
 .more-info-button:hover {
   color: #e02b2b;
+}
+
+.download-circle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 56px;
+  width: 56px;
+  background-color: black;
+  border-radius: 50%;
+}
+.download-circle-button:hover {
+  background-color: #f33838;
+}
+.download-circle-button svg {
+  color: black;
+}
+
+.download-button-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 3vh;
+}
+.download-button-text p {
+  margin-left: 16px;
+  margin-bottom: 0;
 }
 
 /* PROJECT START*/
 .color-box-mid {
   color: white;
   font-size: 2vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   height: 30vh;
   /* mobile - hasta un maximo de 480px */
 }
-
 @media (max-width: 480px) {
   .color-box-mid {
     height: 60vh;
   }
 }
-
 .color-box-mid .project-name {
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
   font-size: 36px;
   font-weight: 400;
 }
-
 .color-box-mid .project-description {
   padding-bottom: 3vh;
   font-size: 14px;
@@ -1170,22 +1360,17 @@ p {
 .project-container {
   margin-top: 10vh;
   margin-bottom: 60px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  -webkit-column-gap: 2px;
-          column-gap: 2px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 2px;
 }
 
 .project-columns-full {
   margin-top: 40px;
   margin-bottom: 40px;
-      grid-column-start: span 8;
+  grid-column-start: span 8;
 }
-
 .project-columns-full img {
   display: block;
   width: 100%;
@@ -1194,16 +1379,14 @@ p {
 .project-columns-four {
   margin-top: 40px;
   margin-bottom: 40px;
-      grid-column-start: span 4;
+  grid-column-start: span 4;
   /* hasta un maximo de 940px */
 }
-
 @media (max-width: 940px) {
   .project-columns-four {
-        grid-column-start: span 8;
+    grid-column-start: span 8;
   }
 }
-
 .project-columns-four img {
   display: block;
   width: 100%;
@@ -1212,9 +1395,8 @@ p {
 .project-columns-six {
   margin-top: 40px;
   margin-bottom: 40px;
-      grid-column-start: span 6;
+  grid-column-start: span 6;
 }
-
 .project-columns-six img {
   display: block;
   width: 100%;
@@ -1223,29 +1405,19 @@ p {
 .project-columns-two {
   margin-top: 40px;
   margin-bottom: 40px;
-      grid-column-start: span 2;
+  grid-column-start: span 2;
 }
-
 .project-columns-two img {
   display: block;
   width: 100%;
 }
 
 .project-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .project-flex-small img {
@@ -1261,56 +1433,37 @@ p {
 }
 
 .three-columns {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 20px;
 }
-
 .three-columns .three-columns-tile {
-      grid-column-start: span 1;
+  grid-column-start: span 1;
   /* mobile - hasta un maximo de 480px */
 }
-
 @media (max-width: 480px) {
   .three-columns .three-columns-tile {
-        grid-column-start: span 3;
+    grid-column-start: span 3;
   }
 }
-
 .three-columns .three-columns-tile div img {
   display: block;
   width: 100%;
 }
 
 .project-image-fit {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   /* hasta un maximo de 680px */
 }
-
 @media (max-width: 680px) {
   .project-image-fit img {
     height: 60vh;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 
@@ -1342,4 +1495,15 @@ p {
 }
 
 /* PROJECT END*/
+/* Gallery zoom images*/
+.img-hover-zoom {
+  overflow: hidden;
+}
+.img-hover-zoom:hover img {
+  transform: scale(1.08);
+}
+.img-hover-zoom img {
+  transition: transform 0.5s ease;
+}
+
 /*# sourceMappingURL=style.css.map */

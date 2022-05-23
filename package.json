@@ -1,0 +1,25 @@
+{
+  "name": "galaxi_4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eli-cth/desafio-coder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eli-cth/desafio-coder/issues"
+  },
+  "homepage": "https://github.com/eli-cth/desafio-coder#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16",
+    "sass": "^1.52.1"
+  }
+}

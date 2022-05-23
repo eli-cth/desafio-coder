@@ -1,0 +1,19 @@
+/* Gallery zoom images*/
+.img-hover-zoom {
+    overflow: hidden; 
+
+    &:hover {
+
+        img {
+            transform: scale(1.08);
+
+    }
+  }
+  
+  img {
+    transition: transform .5s ease;
+  }
+  
+}
+
+

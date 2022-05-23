@@ -12,7 +12,7 @@
 
 
 @mixin section-padding {
-    padding-top: 60px;
+    padding-top: 20px;
     padding-bottom: 100px;
 }
 
@@ -61,7 +61,15 @@
         width: 1440px;
 
     }
+
+    &--compact {
+        padding-bottom: 20px;
+    }
+
+
 }
+
+
 
 
 
@@ -334,3 +342,136 @@ footer {
 }
 
 /*Resume END*/
+
+/*WORKS PAGE START*/
+
+.works-filter {
+    list-style: none;
+    text-align: center;
+    color: white;
+    @include flex-row-wrap;
+    justify-content: center;
+
+    /* hasta un maximo de 500px */
+    @media (max-width:500px) {
+        display: none;
+
+
+    }
+
+    li {
+        font-size: 20px;
+        text-transform: uppercase;
+        padding: 10px;
+        border: solid 1px white;
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-bottom: 8px;
+
+
+    }
+}
+
+.works-grid {
+    width: 100%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    ;
+}
+
+.works-grid-medium {
+    color: white;
+    background-color: #f33838;
+    height: 460px;
+    grid-column-start: span 2;
+
+    /* hasta un maximo de 900px */
+    @media (max-width:900px) {
+        grid-column-start: span 3;
+        height: 360px;
+
+
+    }
+}
+
+.works-grid-small {
+    color: white;
+    text-align: center;
+    background-color: #0025AA;
+    height: 460px;
+    grid-column-start: span 1;
+
+    /* hasta un maximo de 900px */
+    @media (max-width:900px) {
+        grid-column-start: span 3;
+        height: 360px;
+
+
+    }
+}
+
+.works-grid-large {
+    color: white;
+    text-align: center;
+    background-color: black;
+    height: 460px;
+    grid-column-start: span 3;
+
+    /* hasta un maximo de 900px */
+    @media (max-width:900px) {
+        height: 360px;
+    }
+
+
+}
+
+.works-project-cover {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+
+/*WORKS PAGE END*/
+
+/*WIP PAGE START*/
+.wip-centered {
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    p {
+        font-size: map-get($font-size, topline);
+
+        span {
+            color: $secondary-font-color;
+
+        }
+
+    }
+
+    img {
+        display: block;
+        width: 80%;
+        height: 100%;
+        object-fit: cover;
+        padding-top: 50px;
+
+        @media (max-width:400px) {
+            width: 100%;
+
+        }
+    }
+}
+
+/*WIP PAGE END*/

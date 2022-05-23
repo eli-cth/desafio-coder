@@ -58,6 +58,16 @@ body {
     text-transform: uppercase;
     margin-bottom: 5vh;
     margin-top: 5vh;
+    /* mobile - hasta un maximo de 666px */
+    @media (max-width:666px) {
+        font-size:48px;
+
+    }
+
+    /* tablet -entre 661 y 1439 */
+    @media (min-width:661px) and (max-width:1439px) {
+        font-size:62px;
+    }
 }
 
 @mixin headline-spacing {
@@ -140,3 +150,41 @@ p {
         color: $secondary-font-color;
 
     }
+
+    
+.download-circle-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 56px;
+    width: 56px;
+    background-color: black;
+    border-radius: 50%;
+
+    &:hover{
+        background-color: #f33838;
+        }
+    
+
+    svg{
+        color: black;
+    }
+}
+
+
+
+.download-button-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3vh;
+
+    p {
+        margin-left: 16px;
+        margin-bottom: 0;
+    }
+        
+
+
+}
