@@ -97,15 +97,22 @@ p {
     font-size: 44px;
   }
 }
-@media (min-width: 661px) and (max-width: 1439px) {
+@media (min-width: 661px) and (max-width: 1399px) {
   .caps-headline, .caps-headline-outline {
     font-size: 74px;
   }
 }
+@media (min-width: 1400px) {
+  .caps-headline, .caps-headline-outline {
+    font-size: 74px;
+    display: none;
+  }
+}
 
 .caps-headline-outline {
-  -webkit-text-stroke: 2px white;
-  color: #1d1d1d;
+  /* -webkit-text-stroke: 2px white;
+      color: $main-bg-color; */
+  color: gray;
 }
 
 /* Buttons */
@@ -135,7 +142,7 @@ p {
   border-radius: 50%;
 }
 .download-circle-button:hover {
-  background-color: #f33838;
+  background-color: #e02b2b;
 }
 .download-circle-button svg {
   color: black;
@@ -607,15 +614,22 @@ p {
     font-size: 44px;
   }
 }
-@media (min-width: 661px) and (max-width: 1439px) {
+@media (min-width: 661px) and (max-width: 1399px) {
   .caps-headline, .caps-headline-outline {
     font-size: 74px;
   }
 }
+@media (min-width: 1400px) {
+  .caps-headline, .caps-headline-outline {
+    font-size: 74px;
+    display: none;
+  }
+}
 
 .caps-headline-outline {
-  -webkit-text-stroke: 2px white;
-  color: #1d1d1d;
+  /* -webkit-text-stroke: 2px white;
+      color: $main-bg-color; */
+  color: gray;
 }
 
 /* Buttons */
@@ -645,7 +659,7 @@ p {
   border-radius: 50%;
 }
 .download-circle-button:hover {
-  background-color: #f33838;
+  background-color: #e02b2b;
 }
 .download-circle-button svg {
   color: black;
@@ -761,15 +775,22 @@ p {
     font-size: 44px;
   }
 }
-@media (min-width: 661px) and (max-width: 1439px) {
+@media (min-width: 661px) and (max-width: 1399px) {
   .caps-headline, .caps-headline-outline {
     font-size: 74px;
   }
 }
+@media (min-width: 1400px) {
+  .caps-headline, .caps-headline-outline {
+    font-size: 74px;
+    display: none;
+  }
+}
 
 .caps-headline-outline {
-  -webkit-text-stroke: 2px white;
-  color: #1d1d1d;
+  /* -webkit-text-stroke: 2px white;
+      color: $main-bg-color; */
+  color: gray;
 }
 
 /* Buttons */
@@ -799,7 +820,7 @@ p {
   border-radius: 50%;
 }
 .download-circle-button:hover {
-  background-color: #f33838;
+  background-color: #e02b2b;
 }
 .download-circle-button svg {
   color: black;
@@ -1271,15 +1292,22 @@ p {
     font-size: 44px;
   }
 }
-@media (min-width: 661px) and (max-width: 1439px) {
+@media (min-width: 661px) and (max-width: 1399px) {
   .caps-headline, .caps-headline-outline {
     font-size: 74px;
   }
 }
+@media (min-width: 1400px) {
+  .caps-headline, .caps-headline-outline {
+    font-size: 74px;
+    display: none;
+  }
+}
 
 .caps-headline-outline {
-  -webkit-text-stroke: 2px white;
-  color: #1d1d1d;
+  /* -webkit-text-stroke: 2px white;
+      color: $main-bg-color; */
+  color: gray;
 }
 
 /* Buttons */
@@ -1309,7 +1337,7 @@ p {
   border-radius: 50%;
 }
 .download-circle-button:hover {
-  background-color: #f33838;
+  background-color: #e02b2b;
 }
 .download-circle-button svg {
   color: black;
@@ -1504,6 +1532,56 @@ p {
 }
 .img-hover-zoom img {
   transition: transform 0.5s ease;
+}
+
+/* Infinite Slider*/
+.marquee {
+  margin: 5rem 0;
+  font-size: 4.3vw;
+  overflow: hidden;
+  /* mobile - hasta un maximo de 666px */
+}
+@media (max-width: 1400px) {
+  .marquee {
+    display: none;
+  }
+}
+
+.marquee div {
+  display: inline-block;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Dela Gothic One";
+  font-weight: 400;
+  width: var(--tw);
+  text-shadow: var(--tw) 0 currentColor, calc(var(--tw) * 2) 0 currentColor, calc(var(--tw) * 3) 0 currentColor, calc(var(--tw) * 4) 0 currentColor;
+  will-change: transform;
+  animation: marquee var(--ad) linear infinite;
+  animation-play-state: running;
+}
+.marquee div span {
+  color: gray;
+  font-family: "Dela Gothic One", sans-serif;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee div {
+    animation: none;
+    text-shadow: none;
+    width: auto;
+    display: block;
+    line-height: 1.5;
+    text-align: center;
+    white-space: normal;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

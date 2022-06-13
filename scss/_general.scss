@@ -13,7 +13,11 @@ $text-normal: 18px;
 $text-small: 12px;
 
 /* font size map*/
-$font-size: ("headline":56px, "subline":32px, "topline":20px,);
+$font-size: (
+    "headline":56px,
+    "subline":32px,
+    "topline":20px,
+);
 
 
 
@@ -58,30 +62,31 @@ body {
     text-transform: uppercase;
     margin-bottom: 5vh;
     margin-top: 5vh;
+
     /* mobile - hasta un maximo de 666px */
     @media (max-width:666px) {
-        font-size:48px;
+        font-size: 48px;
 
     }
 
     /* tablet -entre 661 y 1439 */
     @media (min-width:661px) and (max-width:1439px) {
-        font-size:62px;
+        font-size: 62px;
     }
 }
 
 @mixin headline-spacing {
     padding-top: 60px;
     padding-bottom: 40px;
-    
+
 }
 
-h1{
+h1 {
     display: none;
 }
 
 h3 {
-    
+
     font-size: map-get($font-size, headline);
     overflow-wrap: anywhere;
     font-family: 'Dela Gothic One', sans-serif;
@@ -120,38 +125,46 @@ p {
     }
 
     /* tablet -entre 661 y 1439 */
-    @media (min-width:661px) and (max-width:1439px) {
+    @media (min-width:661px) and (max-width:1399px) {
         font-size: 74px;
     }
+
+    @media (min-width:1400px) {
+        font-size: 74px;
+        display: none;
+    }
+
+
 }
 
-    .caps-headline-outline {
-        @extend .caps-headline;
-        -webkit-text-stroke: 2px white;
-        color: $main-bg-color;
-    }
+.caps-headline-outline {
+    @extend .caps-headline;
+    /* -webkit-text-stroke: 2px white;
+        color: $main-bg-color; */
+    color: gray;
+}
 
 
-    /* Buttons */
+/* Buttons */
 
-    .more-info-button {
-        display: block;
-        color: $p-font-color;
-        font-family: 'Dela Gothic One', sans-serif;
-        text-transform: uppercase;
-        font-size: $text-medium;
-        text-decoration: underline;
-        font-weight: 400;
-        margin-top: 3vh;
+.more-info-button {
+    display: block;
+    color: $p-font-color;
+    font-family: 'Dela Gothic One', sans-serif;
+    text-transform: uppercase;
+    font-size: $text-medium;
+    text-decoration: underline;
+    font-weight: 400;
+    margin-top: 3vh;
 
-    }
+}
 
-    .more-info-button:hover {
-        color: $secondary-font-color;
+.more-info-button:hover {
+    color: $secondary-font-color;
 
-    }
+}
 
-    
+
 .download-circle-button {
     display: flex;
     align-items: center;
@@ -162,12 +175,12 @@ p {
     background-color: black;
     border-radius: 50%;
 
-    &:hover{
-        background-color: #f33838;
-        }
-    
+    &:hover {
+        background-color: $secondary-font-color;
+    }
 
-    svg{
+
+    svg {
         color: black;
     }
 }
@@ -184,7 +197,7 @@ p {
         margin-left: 16px;
         margin-bottom: 0;
     }
-        
+
 
 
 }

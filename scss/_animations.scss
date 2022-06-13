@@ -1,19 +1,82 @@
 /* Gallery zoom images*/
 .img-hover-zoom {
-    overflow: hidden; 
+  overflow: hidden;
 
-    &:hover {
+  &:hover {
 
-        img {
-            transform: scale(1.08);
+    img {
+      transform: scale(1.08);
 
     }
   }
-  
+
   img {
     transition: transform .5s ease;
   }
+
+}
+
+/* Infinite Slider*/
+
+.marquee {
+  margin: 5rem 0;
+  font-size: 4.3vw;
+  overflow: hidden;
+  /* mobile - hasta un maximo de 666px */
+  @media (max-width:1400px) {
+    display:none;
+
+}
+}
+
+
+.marquee div {
+  display: inline-block;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: 'Dela Gothic One';
+  font-weight: 400;
+  width: var(--tw);
+  text-shadow: var(--tw) 0 currentColor,
+    calc(var(--tw) * 2) 0 currentColor,
+    calc(var(--tw) * 3) 0 currentColor,
+    calc(var(--tw) * 4) 0 currentColor;
+
+  will-change: transform;
+  animation: marquee var(--ad) linear infinite;
+  animation-play-state: running;
+
+  span{
+    
+    color:gray;
+    font-family: 'Dela Gothic One', sans-serif;
+  }
   
+
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee div {
+    animation: none;
+    text-shadow: none;
+    width: auto;
+    display: block;
+    line-height: 1.5;
+    text-align: center;
+    white-space: normal;
+  }
 }
 
 
